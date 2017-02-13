@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<namespace>
+  <!-- Derby -->
+  <entry jndi-name="jdbc/AccountDb">
+    <reference classname="org.apache.derby.jdbc.ClientConnectionPoolDataSource"
+               factoryname="org.apache.derby.client.ClientDataSourceFactory">
+<!--
+      <address name="serverName" value="0.0.0.0"/>
+      <address name="portNumber" value="1527"/>
+      -->
+      <address name="databaseName" value="memory:accountDb"/>
+      <address name="user" value="student"/>
+      <address name="password" value="student"/>
+    </reference>
+  </entry>
+  <!-- MySQL -->
+  <!--
+  <entry jndi-name="jdbc/AccountDb">
+    <reference classname="com.mysql.jdbc.jdbc2.optional.MysqlDataSource"
+               factoryname="com.mysql.jdbc.jdbc2.optional.MysqlDataSourceFactory">
+      <address name="serverName" value="localhost"/>
+      <address name="port" value="3306"/>
+      <address name="databaseName" value="accountDB"/>
+      <address name="explicitUrl" value="false"/>
+      <address name="user" value="student"/>
+      <address name="password" value="student"/>
+    </reference>
+  </entry>
+  -->
+</namespace>
+

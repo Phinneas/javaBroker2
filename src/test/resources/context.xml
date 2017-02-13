@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+  <!-- Bean implementing edu.uw.ext.framework.account.AccountFactory -->
+  <bean id="AccountFactory" class="edu.uw.beardcl.account.SimpleAccountFactory"/>
+
+  <!-- Bean implementing edu.uw.ext.framework.account.Address -->
+  <bean id="Address" class="edu.uw.beardcl.account.SimpleAddress" scope="prototype"/>
+
+  <!-- Bean implementing edu.uw.ext.framework.account.CreditCard -->
+  <bean id="CreditCard" class="edu.uw.beardcl.account.SimpleCreditCard" scope="prototype"/>
+
+  <!-- Bean implementing edu.uw.ext.framework.account.Account -->
+  <bean id="Account" class="edu.uw.beardcl.account.SimpleAccount" scope="prototype"/>
+
+  <!-- Bean implementing edu.uw.ext.framework.account.AccountManagerFactory -->
+  <bean id="AccountManagerFactory" class="edu.uw.beardcl.account.SimpleAccountManagerFactory"/>
+
+  <!-- Bean providing RDBMS implementation of edu.uw.ext.framework.account.DaoFactory -->
+  <bean id="DaoFactory" class="edu.uw.beardcl.dao.JsonDaoFactory"/>
+  
+  <!-- Bean implementing edu.uw.ext.framework.broker.BrokerFactory -->
+  <bean id="BrokerFactory" class="edu.uw.beardcl.broker.SimpleBrokerFactory"/>
+  
+  
+</beans>
+
